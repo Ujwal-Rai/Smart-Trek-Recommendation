@@ -1,0 +1,69 @@
+trek_name,cost_usd,duration_days,difficulty_level,max_altitude_m,accommodation,best_season,difficulty_encoded,fitness_encoded,acc_Guesthouse,acc_Lodge,acc_Teahouse,season_Spring & Autumn
+Everest Base Camp Trek,1420.0,16,Moderate,5545.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Everest Base Camp Short Trek,1295.0,14,Moderate,5545.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Everest Base Camp Heli Shuttle Trek,2000.0,12,Moderate,5545.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Everest Base Camp Heli Trek,3300.0,11,Moderate,5545.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Everest Base Camp Trek For Seniors,1800.0,20,Moderate,5545.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Everest Chola Pass Trek,1720.0,19,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Gokyo Lake Renjo La Pass Trek,1450.0,16,Moderate,5360.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Everest High Passes Trek,1950.0,22,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Short Everest Trek,1060.0,7,Moderate,3900.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Everest Panorama Trek,1150.0,10,Moderate,3860.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Everest View Trek,1100.0,9,Moderate,3860.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Luxury Everest Base Camp Heli Trek,4200.0,11,Moderate,5545.0,Teahouse,Spring & Autumn,1,1,False,False,True,True
+Everest Base Camp Trek With Chola And Renjo La Pass,1900.0,21,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Annapurna Base Camp Trek,1090.0,14,Moderate,4210.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Annapurna Base Camp Short Trek,1090.0,11,Moderate,4210.0,Teahouse,Spring & Autumn,1,1,False,False,True,True
+Instant Annapurna Base Camp Trek,980.0,9,Moderate,4230.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Annapurna Base Camp Heli Trek,1750.0,9,Moderate,4210.0,Teahouse,Spring & Autumn,1,1,False,False,True,True
+Mardi Himal Trek,850.0,9,Moderate,4200.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Mardi Himal Trekking,850.0,8,Moderate,4200.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Classic Annapurna Circuit Trek,1350.0,18,Moderate,5416.0,Teahouse,Spring & Autumn,1,1,False,False,True,True
+Annapurna Circuit Trek,1250.0,14,Moderate,5416.0,Teahouse,Spring & Autumn,1,1,False,False,True,True
+Annapurna Circuit Short Trek,1250.0,12,Hard,5416.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Annapurna Luxury Trek,1450.0,9,Moderate,2012.0,Lodge,Spring & Autumn,1,1,False,True,False,True
+Annapurna Panorama Trek,860.0,9,Easy,3210.0,Teahouse,Spring & Autumn,0,0,False,False,True,True
+Annapurna Tilicho Lake Trek,1450.0,17,Hard,5416.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Short Annapurna Trek,590.0,5,Easy,1990.0,Lodge,Spring & Autumn,0,0,False,True,False,True
+Manaslu Circuit Trek,1450.0,15,Hard,5106.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Manaslu Circuit Trekking,1380.0,14,Moderate,5220.0,Teahouse,Spring & Autumn,1,1,False,False,True,True
+Tsum Valley With Manaslu Trek,1850.0,20,Hard,5220.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Upper Mustang Trek,2150.0,17,Moderate,4210.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Upper Mustang Trek With Yara,2300.0,18,Moderate,4200.0,Lodge,Spring & Autumn,1,1,False,True,False,True
+Upper Mustang Tiji Festival Trek,2150.0,18,Moderate,4210.0,Teahouse,Spring & Autumn,1,1,False,False,True,True
+Langtang Valley Trek,750.0,10,Moderate,5050.0,Teahouse,Spring & Autumn,1,1,False,False,True,True
+Langtang Gosaikunda Trek,1180.0,16,Moderate,4600.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Tamang Heritage Trek,920.0,14,Moderate,5050.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Tamang Heritage Trail,750.0,8,Easy,2607.0,Teahouse,Spring & Autumn,0,0,False,False,True,True
+Helambu Trek,780.0,9,Easy,3650.0,Guesthouse,Spring & Autumn,0,0,True,False,False,True
+Everest Base Camp Trek For Youths,1750.0,14,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Everest Base Camp Luxury Lodge Trek,1499.0,15,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Everest Base Camp Trek Via Gokyo Lakes And Cho La Pass,1499.0,18,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Everest Advanced Base Camp Trek From Tibet,1499.0,18,Hard,6340.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Gokyo Lakes And Gokyo Ri Trek,1499.0,14,Hard,5357.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Annapurna Sanctuary Trek,1499.0,14,Hard,4130.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Rara Lake Trek,1499.0,15,Moderate,3055.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Kanchenjunga Circuit Trek,1499.0,25,Hard,5143.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Tsum Valley Trek,1499.0,19,Hard,6000.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+The Royal Trek,1499.0,9,Moderate,1730.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Makalu Base Camp Trek,1499.0,22,Hard,4870.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+"Langtang, Gosainkunda And Helambu Trek",1499.0,17,Moderate,5000.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Nar Phu Valley Trek,1499.0,19,Hard,5416.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Annapurna Circle Trek,1499.0,14,Hard,5416.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Everest Kangshung Face Trek,1499.0,21,Hard,5320.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Tsum Valley And Manaslu Trek,1499.0,27,Hard,4460.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Khopra Ridge Community Trek,1499.0,13,Hard,4500.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Nepal Experience Tour,1499.0,12,Easy,3210.0,Guesthouse,Spring & Autumn,0,0,True,False,False,True
+Annapurna Circuit Trek With Tilicho Lake And Poon Hill,1499.0,20,Hard,5416.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Annapurna With Tilicho Lake Trek,1499.0,17,Hard,5416.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Langtang Valley Trek With Ganja La Pass,1499.0,14,Hard,5122.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Manaslu And Annapurna Trek With Tilicho Lake,1499.0,25,Hard,5416.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Nepal Trekking And Everest Himalaya Heli Tour,1499.0,7,Moderate,5545.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Nepal Hiking And Culture Tour,1499.0,8,Moderate,1550.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Annapurna Sunrise And Everest View Trek,1499.0,17,Moderate,3870.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Tenzing Hillary Everest Marathon,1499.0,20,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Everest Kalapathar Trekking,1390.0,15,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Everest Base Camp Trek Via Gokyo Lake,1530.0,19,Hard,5545.0,Guesthouse,Spring & Autumn,2,2,True,False,False,True
+Gokyo Lake Trek,1190.0,13,Moderate,5357.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
+Ghorepani Poon Hill Trek,450.0,10,Easy,3210.0,Guesthouse,Spring & Autumn,0,0,True,False,False,True
+Langtang Valley Trekking,690.0,11,Moderate,4773.0,Guesthouse,Spring & Autumn,1,1,True,False,False,True
