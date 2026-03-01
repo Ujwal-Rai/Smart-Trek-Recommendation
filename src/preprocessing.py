@@ -114,4 +114,4 @@ def preprocess(df):
     )
     df_scaled['trek_name'] = df['trek_name'].values
 
-    return df, df_scaled, feature_cols, scalerS
+    return df, df_scaled, feature_cols, scaler
