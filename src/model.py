@@ -127,7 +127,7 @@ def display_recommendations(results, user_input):
     Prints the top N recommendations in a clean readable format.
     """
     print("\n" + "=" * 60)
-    print("   🏔️  TOP TREK RECOMMENDATIONS FOR YOUR PROFILE")
+    print("  TOP TREK RECOMMENDATIONS FOR YOUR PROFILE")
     print("=" * 60)
     print(f"  Duration     : {user_input['duration_days']} days")
     print(f"  Budget       : ${user_input['cost_usd']:,} USD")
@@ -137,18 +137,18 @@ def display_recommendations(results, user_input):
     print("=" * 60)
 
     for _, row in results.iterrows():
-        print(f"\n  🥇 RANK #{int(row['rank'])}  —  {row['trek_name']}")
+        print(f"\n   RANK #{int(row['rank'])}  —  {row['trek_name']}")
         print(f"  ─────────────────────────────────────────")
-        print(f"  ✅ Match Score    : {row['similarity_score']:.2%}")
-        print(f"  📅 Duration      : {int(row['duration_days'])} days")
-        print(f"  💰 Cost          : ${row['cost_usd']:,.0f} USD")
-        print(f"  🏔️  Max Altitude  : {row['max_altitude_m']:,.0f} m")
-        print(f"  💪 Difficulty    : {row['difficulty_level']}")
-        print(f"  🏠 Accommodation : {row['accommodation']}")
-        print(f"  🌸 Best Season   : {row['best_season']}")
+        print(f"   Match Score    : {row['similarity_score']:.2%}")
+        print(f"   Duration      : {int(row['duration_days'])} days")
+        print(f"   Cost          : ${row['cost_usd']:,.0f} USD")
+        print(f"    Max Altitude  : {row['max_altitude_m']:,.0f} m")
+        print(f"   Difficulty    : {row['difficulty_level']}")
+        print(f"   Accommodation : {row['accommodation']}")
+        print(f"   Best Season   : {row['best_season']}")
 
     print("\n" + "=" * 60)
-    print("  ℹ️  Scores closer to 100% = stronger match")
+    print("  ℹ  Scores closer to 100% = stronger match")
     print("=" * 60 + "\n")
 
 
