@@ -2,7 +2,6 @@
 import sys
 import os
 
-# Add src directory to path so imports work correctly
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from model import load_data, build_user_vector, calculate_similarity, rank_treks, display_recommendations
