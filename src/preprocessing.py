@@ -3,15 +3,11 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
-
 def preprocess(df):
 
-
-    
     cols_to_drop = [c for c in ['Unnamed: 0', 'Contact or Book your Trip'] if c in df.columns]
     df.drop(columns=cols_to_drop, inplace=True)
 
-   
     df.rename(columns={
         'Trek'            : 'trek_name',
         'Cost'            : 'cost_usd',
@@ -21,7 +17,6 @@ def preprocess(df):
         'Accomodation'    : 'accommodation',
         'Best Travel Time': 'best_season'
     }, inplace=True)
-
 
     def clean_cost(v):
         v = str(v).replace('\n','').replace('$','').replace('USD','').replace(',','').strip()
@@ -66,7 +61,6 @@ def preprocess(df):
         elif has_autumn or has_winter: return 'Autumn'
         else: return 'Spring & Autumn'
 
-
     df['cost_usd']         = df['cost_usd'].apply(clean_cost)
     df['duration_days']    = df['duration_days'].apply(clean_duration)
     df['max_altitude_m']   = df['max_altitude_m'].apply(clean_altitude)
@@ -92,14 +86,12 @@ def preprocess(df):
     season_dummies = pd.get_dummies(df['best_season'],   prefix='season')
     df = pd.concat([df, acc_dummies, season_dummies], axis=1)
 
-
     feature_cols = (
         ['duration_days', 'cost_usd', 'max_altitude_m',
          'difficulty_encoded', 'fitness_encoded']
         + list(acc_dummies.columns)
         + list(season_dummies.columns)
     )
-
 
     scaler = MinMaxScaler()
     df_scaled = pd.DataFrame(
