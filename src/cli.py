@@ -38,13 +38,13 @@ def get_duration():
         try:
             days = int(input("  Enter number of days available (e.g. 7, 14, 21): "))
             if days <= 0:
-                print("  ⚠️  Please enter a positive number of days.\n")
+                print("  Please enter a positive number of days.\n")
             elif days > 30:
-                print("  ⚠️  Maximum supported duration is 30 days.\n")
+                print("  Maximum supported duration is 30 days.\n")
             else:
                 return days
         except ValueError:
-            print("  ⚠️  Invalid input. Please enter a whole number (e.g. 14).\n")
+            print("   Invalid input. Please enter a whole number (e.g. 14).\n")
 
 
 def get_budget():
@@ -56,11 +56,11 @@ def get_budget():
         try:
             budget = float(input("  Enter your total budget in USD (e.g. 1000, 1500): $"))
             if budget <= 0:
-                print("  ⚠️  Budget must be greater than 0.\n")
+                print("   Budget must be greater than 0.\n")
             else:
                 return budget
         except ValueError:
-            print("  ⚠️  Invalid input. Please enter a number (e.g. 1500).\n")
+            print("    Invalid input. Please enter a number (e.g. 1500).\n")
 
 
 def get_difficulty():
@@ -80,7 +80,7 @@ def get_difficulty():
         if choice in options:
             return options[choice]
         else:
-            print("  ⚠️  Invalid choice. Please enter 1, 2 or 3.\n")
+            print("    Invalid choice. Please enter 1, 2 or 3.\n")
 
 
 def get_accommodation():
@@ -99,7 +99,7 @@ def get_accommodation():
         if choice in options:
             return options[choice]
         else:
-            print("  ⚠️  Invalid choice. Please enter 1, 2 or 3.\n")
+            print("    Invalid choice. Please enter 1, 2 or 3.\n")
 
 
 def get_season():
@@ -122,7 +122,7 @@ def get_season():
         if choice in options:
             return options[choice]
         else:
-            print("  ⚠️  Invalid choice. Please enter 1, 2 or 3.\n")
+            print("    Invalid choice. Please enter 1, 2 or 3.\n")
 
 
 # ============================================================
@@ -133,7 +133,7 @@ def print_banner():
     """Prints the welcome banner when the CLI starts."""
     print("\n")
     print("  ╔══════════════════════════════════════════════════════╗")
-    print("  ║     🏔️   NEPAL SMART TREK RECOMMENDATION SYSTEM      ║")
+    print("  ║        NEPAL SMART TREK RECOMMENDATION SYSTEM      ║")
     print("  ║         AI-Powered Trekking Route Advisor            ║")
     print("  ╚══════════════════════════════════════════════════════╝")
     print()
@@ -156,7 +156,7 @@ def confirm_input(user_input):
     Returns True if confirmed, False if user wants to re-enter.
     """
     print("\n  " + "─" * 54)
-    print("  📋  YOUR PREFERENCES SUMMARY")
+    print("   YOUR PREFERENCES SUMMARY")
     print("  " + "─" * 54)
     print(f"  • Days Available  : {user_input['duration_days']} days")
     print(f"  • Budget          : ${user_input['cost_usd']:,.0f} USD")
@@ -172,7 +172,7 @@ def confirm_input(user_input):
         elif confirm in ['no', 'n']:
             return False
         else:
-            print("  ⚠️  Please type 'yes' or 'no'.")
+            print("   Please type 'yes' or 'no'.")
 
 
 # ============================================================
@@ -190,7 +190,7 @@ def ask_run_again():
         elif again in ['no', 'n']:
             return False
         else:
-            print("  ⚠️  Please type 'yes' or 'no'.")
+            print("   Please type 'yes' or 'no'.")
 
 
 # ============================================================
@@ -215,12 +215,12 @@ def main():
 
     # --- Load and preprocess data ONCE before the loop ---
     # This avoids reloading the dataset on every run
-    print("  ⏳ Loading trek database, please wait...")
+    print("   Loading trek database, please wait...")
     try:
         df, df_scaled, feature_cols, scaler = load_data(DATA_PATH)
-        print(f"  ✅ Database loaded: {len(df)} trekking routes ready.\n")
+        print(f"   Database loaded: {len(df)} trekking routes ready.\n")
     except FileNotFoundError:
-        print(f"\n  ❌ ERROR: Dataset not found at:\n     {DATA_PATH}")
+        print(f"\n   ERROR: Dataset not found at:\n     {DATA_PATH}")
         print("  Please update the DATA_PATH variable in cli.py")
         print("  to point to your Trek Data.csv file location.\n")
         sys.exit(1)
@@ -258,10 +258,10 @@ def main():
             if confirm_input(user_input):
                 break  # confirmed — move to recommendation
             else:
-                print("\n  🔄 Let's start over. Please re-enter your preferences.\n")
+                print("\n   Let's start over. Please re-enter your preferences.\n")
 
         # --- Run recommendation engine ---
-        print("\n  ⏳ Finding your best treks...")
+        print("\n   Finding your best treks...")
 
         user_vector       = build_user_vector(user_input, feature_cols, scaler)
         similarity_scores = calculate_similarity(user_vector, df_scaled, feature_cols)

@@ -11,18 +11,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 def preprocess(df):
-    """
-    Runs the complete preprocessing pipeline on the raw dataset.
 
-    Parameters:
-        df (DataFrame): Raw loaded DataFrame from Trek_Data.csv
-
-    Returns:
-        df            (DataFrame) : Cleaned dataset with readable columns
-        df_scaled     (DataFrame) : Normalised feature matrix for similarity
-        feature_cols  (list)      : Feature column names
-        scaler        (MinMaxScaler): Fitted scaler for transforming user input
-    """
 
     # --- Drop unnecessary columns ---
     cols_to_drop = [c for c in ['Unnamed: 0', 'Contact or Book your Trip'] if c in df.columns]
@@ -125,4 +114,4 @@ def preprocess(df):
     )
     df_scaled['trek_name'] = df['trek_name'].values
 
-    return df, df_scaled, feature_cols, scaler
+    return df, df_scaled, feature_cols, scalerS
