@@ -1,13 +1,8 @@
-
-
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
-
 from preprocessing import preprocess
-
-
 
 def load_data(raw_filepath):
  
@@ -15,9 +10,6 @@ def load_data(raw_filepath):
     df, df_scaled, feature_cols, scaler = preprocess(df_raw)
     print(f"[INFO] Data loaded and cleaned: {len(df)} treks | {len(feature_cols)} features")
     return df, df_scaled, feature_cols, scaler
-
-
-
 
 def build_user_vector(user_input, feature_cols, scaler):
  
@@ -40,24 +32,19 @@ def build_user_vector(user_input, feature_cols, scaler):
     if acc_col in user_row:
         user_row[acc_col] = 1.0
 
-
     season_col = f"season_{user_input['best_season']}"
     if season_col in user_row:
         user_row[season_col] = 1.0
 
-
     user_df     = pd.DataFrame([user_row])[feature_cols]
     user_scaled = scaler.transform(user_df)
     return user_scaled
-
-
 
 def calculate_similarity(user_vector, df_scaled, feature_cols):
 
     trek_matrix       = df_scaled[feature_cols].values
     similarity_scores = cosine_similarity(user_vector, trek_matrix)
     return similarity_scores.flatten()
-
 
 def rank_treks(df, similarity_scores, top_n=3):
 
@@ -70,9 +57,6 @@ def rank_treks(df, similarity_scores, top_n=3):
     results = results.head(top_n).reset_index(drop=True)
     results.insert(0, 'rank', range(1, top_n + 1))
     return results
-
-
-
 
 def display_recommendations(results, user_input):
 
@@ -101,8 +85,6 @@ def display_recommendations(results, user_input):
     print("  ℹ  Scores closer to 100% = stronger match")
     print("=" * 60 + "\n")
 
-
-
 def recommend(user_input, raw_filepath, top_n=3):
 
     df, df_scaled, feature_cols, scaler = load_data(raw_filepath)
@@ -111,7 +93,6 @@ def recommend(user_input, raw_filepath, top_n=3):
     results           = rank_treks(df, similarity_scores, top_n)
     display_recommendations(results, user_input)
     return results
-
 
 if __name__ == "__main__":
 

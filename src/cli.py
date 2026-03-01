@@ -1,16 +1,9 @@
-
 import sys
 import os
-
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 from model import load_data, build_user_vector, calculate_similarity, rank_treks, display_recommendations
 
-
-
 DATA_PATH = r"E:\AI Project for third sem\Trek Data.csv"
-
-
 
 def get_duration():
 

@@ -1,19 +1,15 @@
-
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import MinMaxScaler
 import warnings
 warnings.filterwarnings('ignore')
-
 from preprocessing import preprocess
-
 
 def load_data(raw_filepath):
     df_raw = pd.read_csv(raw_filepath)
     df, df_scaled, feature_cols, scaler = preprocess(df_raw)
     return df, df_scaled, feature_cols, scaler
-
 
 def build_user_vector(user_input, feature_cols, scaler):
     difficulty_map = {'Easy': 0, 'Moderate': 1, 'Hard': 2}
@@ -36,7 +32,6 @@ def build_user_vector(user_input, feature_cols, scaler):
     user_scaled = scaler.transform(user_df)
     return user_scaled
 
-
 def get_recommendations(user_input, df, df_scaled, feature_cols, scaler, top_n=3):
     user_vector = build_user_vector(user_input, feature_cols, scaler)
     trek_matrix = df_scaled[feature_cols].values
@@ -49,7 +44,6 @@ def get_recommendations(user_input, df, df_scaled, feature_cols, scaler, top_n=3
     results = results.sort_values('similarity_score', ascending=False)
     results = results.head(top_n).reset_index(drop=True)
     return results
-
 
 def evaluate_similarity_scores(user_input, df, df_scaled, feature_cols, scaler):
     """
