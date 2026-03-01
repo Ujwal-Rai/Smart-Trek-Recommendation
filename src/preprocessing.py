@@ -1,9 +1,3 @@
-# ============================================================
-# preprocessing.py
-# Project: AI-Based Smart Trek Recommendation System for Nepal
-# Purpose: All data cleaning and preprocessing logic lives HERE.
-#          This file is imported by model.py — never duplicated.
-# ============================================================
 
 import pandas as pd
 import numpy as np
@@ -13,11 +7,11 @@ from sklearn.preprocessing import MinMaxScaler
 def preprocess(df):
 
 
-    # --- Drop unnecessary columns ---
+    
     cols_to_drop = [c for c in ['Unnamed: 0', 'Contact or Book your Trip'] if c in df.columns]
     df.drop(columns=cols_to_drop, inplace=True)
 
-    # --- Rename columns to snake_case ---
+   
     df.rename(columns={
         'Trek'            : 'trek_name',
         'Cost'            : 'cost_usd',
@@ -28,7 +22,7 @@ def preprocess(df):
         'Best Travel Time': 'best_season'
     }, inplace=True)
 
-    # --- Cleaning helper functions ---
+
     def clean_cost(v):
         v = str(v).replace('\n','').replace('$','').replace('USD','').replace(',','').strip()
         try: return float(v)
@@ -72,7 +66,7 @@ def preprocess(df):
         elif has_autumn or has_winter: return 'Autumn'
         else: return 'Spring & Autumn'
 
-    # --- Apply all cleaning ---
+
     df['cost_usd']         = df['cost_usd'].apply(clean_cost)
     df['duration_days']    = df['duration_days'].apply(clean_duration)
     df['max_altitude_m']   = df['max_altitude_m'].apply(clean_altitude)
@@ -81,15 +75,15 @@ def preprocess(df):
     df['best_season']      = df['best_season'].apply(standardise_season)
     df['trek_name']        = df['trek_name'].str.strip().str.title()
 
-    # --- Impute missing values ---
+
     for col in ['cost_usd', 'duration_days', 'max_altitude_m']:
         df[col] = df[col].fillna(df[col].median())
 
-    # --- Remove duplicates ---
+
     df.drop_duplicates(subset=['trek_name'], keep='first', inplace=True)
     df.reset_index(drop=True, inplace=True)
 
-    # --- Encode categorical features ---
+
     difficulty_map = {'Easy': 0, 'Moderate': 1, 'Hard': 2}
     df['difficulty_encoded'] = df['difficulty_level'].map(difficulty_map)
     df['fitness_encoded']    = df['difficulty_encoded'].copy()
@@ -98,7 +92,7 @@ def preprocess(df):
     season_dummies = pd.get_dummies(df['best_season'],   prefix='season')
     df = pd.concat([df, acc_dummies, season_dummies], axis=1)
 
-    # --- Feature selection ---
+
     feature_cols = (
         ['duration_days', 'cost_usd', 'max_altitude_m',
          'difficulty_encoded', 'fitness_encoded']
@@ -106,7 +100,7 @@ def preprocess(df):
         + list(season_dummies.columns)
     )
 
-    # --- Normalise with MinMaxScaler ---
+
     scaler = MinMaxScaler()
     df_scaled = pd.DataFrame(
         scaler.fit_transform(df[feature_cols]),
